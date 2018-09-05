@@ -25,8 +25,8 @@ let url = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=";
 const secondParamter = "&types=geocode&location=28.644800,77.216721&radius=500&key=AIzaSyDt8WyuEo6kL0vPTPSa88bAWk7l_pMKOlY"
 
 // creating server
-app.listen("4000", function(){
-    console.log("server started at port", 4000)
+app.listen("7777", function(){
+    console.log("server started at port", 7777)
 })
 
 app.post('/', function(req, res){
@@ -50,7 +50,7 @@ app.get('/stopDetails', function(req, res){
     });
 });
 
-app.get('/routes', function(req, res){
+app.get('/allRoutes', function(req, res){
     db.all("SELECT * FROM table_bus", function(err, rows){
         console.log(rows);
         res.json(rows);
